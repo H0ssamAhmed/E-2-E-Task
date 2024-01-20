@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "High-performance laptop with the latest specifications",
+        "price": 999.00,
+        "isAddedToCart": true
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "description": "Flagship smartphone with advanced camera features",
+        "price": 799.99,
+        "isAddedToCart": true
+    },
+    {
+        "id": 3,
+        "name": "Coffee Maker",
+        "description": "Automatic coffee maker with programmable settings",
+        "price": 69.99,
+        "isAddedToCart": true
+    },
+    {
+        "id": 4,
+        "name": "Headphones",
+        "description": "Wireless noise-canceling headphones for immersive audio",
+        "price": 129.99,
+        "isAddedToCart": true
+    },
+    {
+        "id": 5,
+        "name": "Fitness Tracker",
+        "description": "Track your daily activities and monitor health with this fitness tracker",
+        "price": 49.95,
+        "isAddedToCart": true
+    },
+    {
+        "id": 6,
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with long battery life",
+        "price": 39.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 7,
+        "name": "Digital Camera",
+        "description": "High-resolution digital camera for photography enthusiasts",
+        "price": 599.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 8,
+        "name": "Gaming Console",
+        "description": "Latest gaming console with powerful graphics and gaming capabilities",
+        "price": 349.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 9,
+        "name": "Smartwatch",
+        "description": "Multi-functional smartwatch with health and communication features",
+        "price": 129.95,
+        "isAddedToCart": false
+    },
+    {
+        "id": 10,
+        "name": "Tablet",
+        "description": "Slim and lightweight tablet for on-the-go productivity",
+        "price": 299.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 11,
+        "name": "Wireless Earbuds",
+        "description": "Compact and stylish wireless earbuds for music enthusiasts",
+        "price": 79.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 12,
+        "name": "Robot Vacuum Cleaner",
+        "description": "Smart robot vacuum with navigation and cleaning scheduling",
+        "price": 249.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 13,
+        "name": "Desktop Monitor",
+        "description": "Large high-resolution monitor for enhanced computing experience",
+        "price": 229.95,
+        "isAddedToCart": false
+    },
+    {
+        "id": 14,
+        "name": "Electric Toothbrush",
+        "description": "Advanced electric toothbrush for optimal oral hygiene",
+        "price": 49.50,
+        "isAddedToCart": false
+    },
+    {
+        "id": 15,
+        "name": "External Hard Drive",
+        "description": "High-capacity external hard drive for data storage",
+        "price": 89.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 16,
+        "name": "Portable Charger",
+        "description": "Compact portable charger for charging devices on the go",
+        "price": 29.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 17,
+        "name": "Camera Drone",
+        "description": "GPS-enabled camera drone for aerial photography and videography",
+        "price": 499.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 18,
+        "name": "Printer",
+        "description": "Wireless printer with scanning and copying capabilities",
+        "price": 129.50,
+        "isAddedToCart": false
+    },
+    {
+        "id": 19,
+        "name": "Power Bank",
+        "description": "High-capacity power bank for extended device charging",
+        "price": 19.99,
+        "isAddedToCart": false
+    },
+    {
+        "id": 20,
+        "name": "VR Headset",
+        "description": "Immersive virtual reality headset for gaming and experiences",
+        "price": 299.00,
+        "isAddedToCart": false
+    },
+    {
+        "id": 21,
+        "name": "Coffee Machine",
+        "description": "Automatic coffee maker with programmable settings",
+        "price": 69.99,
+        "isAddedToCart": false
+    }
+]

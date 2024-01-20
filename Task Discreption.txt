@@ -1,0 +1,31 @@
+
+Task Description: 
+You are tasked with building a simple web application that displays a list of items. The application should be built using Next.js and React, and should not require any backend. 
+
+Requirements: 
+
+	1.The application should have a homepage that displays a list of items. 
+	2.The list of items should be fetched from a JSON file. 
+	3.Each item in the list should display the following information: 
+		o> Item name 
+		o> Item description 
+		o> Item price 
+
+Features
+
+✔✔ 1.The application should have a search bar that allows users to search for items by name. 
+✔✔ 2.The search bar should filter the list of items in real-time as the user types. 
+✔✔ 3.The application should be responsive and work well on both desktop and mobile devices. 
+✔✔ 4.Add a feature that allows users to sort the list of items by price or name. 
+✔✔ 5.Add a feature that allows users to filter the list of items by price range. 
+	6.Add a feature that allows users to add items to a shopping cart. 
+	7.Add a feature that allows users to view their shopping cart and checkout. 
+
+Bounce test the application, you can follow these steps: 
+
+	1.Write test cases for each of the features mentioned above.  
+	2.Create a test plan that includes all the test cases you have written. 
+	3.Execute the test plan and record the results of each test case. 
+	4.If any test case fails, debug the application and fix the issue. 
+	5.Once all test cases pass, the application is ready for deployment. 
+	
