@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import jsonData from "../data.json";
+// import jsonData from "../data.json";
+import useFetch from "./useFetch";
 
 const useSort = () => {
   const [typeOfSorting, setTypeOfSorting] = useState("Sorted by Id");
   const [minRange, setMinRange] = useState(0);
   const [maxRange, setMaxRange] = useState(0);
+  const [data, setData] = useState("");
 
-  const sortByName = () => {
-    let sortedNames = jsonData.sort(function (a, b) {
+  const sortByName = (data) => {
+    let sortedNames = data?.sort(function (a, b) {
       var nameA = a.name;
       var nameB = b.name;
       if (nameA < nameB) {
@@ -21,8 +23,8 @@ const useSort = () => {
     setTypeOfSorting("Sorted by Name");
     return sortedNames;
   };
-  const sortByPrice = () => {
-    let sortedPrices = jsonData.sort((a, b) => {
+  const sortByPrice = (data) => {
+    let sortedPrices = data?.sort(function (a, b) {
       if (a.price > b.price) {
         return 1;
       }
@@ -35,8 +37,8 @@ const useSort = () => {
 
     return sortedPrices;
   };
-  const sortById = () => {
-    let sortedId = jsonData.sort((a, b) => {
+  const sortById = (data) => {
+    let sortedId = data?.sort(function (a, b) {
       if (a.id > b.id) {
         return 1;
       }
@@ -49,14 +51,19 @@ const useSort = () => {
     return sortedId;
   };
 
-  const sortByRange = () => {
-    let itemsInRange = jsonData.filter((range) => {
+  const sortByRange = (rangedDate) => {
+    let itemsInRange = rangedDate?.filter((range) => {
       if (range.price >= minRange && range.price <= maxRange) {
         return range;
       }
     });
     setTypeOfSorting("Sorted by Range");
+    // console.log(itemsInRange.length);
+    // console.log(rangedDate);
+    // if (itemsInRange.length != 0) {
+    //   console.log("rangedDate");
     return itemsInRange;
+    // } else return rangedDate;
   };
   return {
     sortByName,
@@ -65,6 +72,7 @@ const useSort = () => {
     sortByRange,
     setMinRange,
     setMaxRange,
+    data,
     typeOfSorting,
   };
 };

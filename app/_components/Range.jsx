@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useSort from "../hooks/useSort";
 
-const Range = ({ setRangeData }) => {
+const Range = ({ setRangeData, data }) => {
   const sort = useSort();
   const [minRange, setMinRange] = useState("");
   const [maxRange, setMaxRange] = useState("");
@@ -16,7 +16,7 @@ const Range = ({ setRangeData }) => {
   };
   const submitting = (e) => {
     e.preventDefault();
-    setRangeData(sort.sortByRange());
+    setRangeData(sort.sortByRange(data));
     setMinRange("");
     setMaxRange("");
   };

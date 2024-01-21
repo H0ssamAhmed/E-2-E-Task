@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import originData from "../data.json";
-const Search = ({ data, setData }) => {
+// import originData from "../data.json";
+// import useFetch from "../hooks/useFetch";
+const Search = ({ setData, data }) => {
+  // const { fetchedData } = useFetch(url);
+
   const [searchValue, setSearchValue] = useState("");
   const changeSearchValue = (e) => {
     setSearchValue(e.target.value);
@@ -9,13 +12,13 @@ const Search = ({ data, setData }) => {
   useEffect(() => {
     let filteredData = [];
     if (searchValue != "") {
-      data.map((item) => {
+      data?.map((item) => {
         if (item.name.toLocaleLowerCase().startsWith(searchValue)) {
           filteredData.push(item);
         }
         setData(filteredData);
       });
-    } else setData(originData);
+    } else setData(data);
   }, [searchValue]);
 
   return (
