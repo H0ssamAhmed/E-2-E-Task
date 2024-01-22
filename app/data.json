@@ -5,7 +5,7 @@
       "name": "Laptop",
       "description": "High-performance laptop with the latest specifications",
       "price": 999,
-      "isAddedToCart": true
+      "isAddedToCart": false
     },
     {
       "id": "2",

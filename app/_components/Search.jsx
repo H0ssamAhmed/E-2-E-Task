@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import originData from "../data.json";
-// import useFetch from "../hooks/useFetch";
-const Search = ({ setData, data }) => {
-  // const { fetchedData } = useFetch(url);
 
+const Search = ({ setData, data }) => {
   const [searchValue, setSearchValue] = useState("");
   const changeSearchValue = (e) => {
     setSearchValue(e.target.value);

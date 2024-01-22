@@ -1,18 +1,15 @@
-// "use client";
+"use client";
 import React, { useEffect, useState } from "react";
 import useSort from "../hooks/useSort";
-// import jsonData from "../data.json";
 import Range from "./Range";
 import Search from "./Search";
 import Cart from "./Cart";
-import Image from "next/image";
 import useFetch from "../hooks/useFetch";
-// import updateIsAddedToCart from "./updatData";
 
 const HomePage = () => {
   const url = "http://localhost:8000/data";
   const sort = useSort(url);
-  const { fetchedData, handleAddToCart, handllRemoveFromCart } = useFetch(url);
+  const { fetchedData, handleAddRemove } = useFetch(url);
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -31,10 +28,10 @@ const HomePage = () => {
     sort.sortById(fetchedData);
   };
   const addToCart = (id) => {
-    handleAddToCart(id);
+    handleAddRemove(id);
   };
   const removeFromCart = (id) => {
-    handllRemoveFromCart(id);
+    handleAddRemove(id);
   };
   return (
     <div>
@@ -63,11 +60,11 @@ const HomePage = () => {
           </div>
           <Range setRangeData={setData} data={data} url={url} />
 
-          <Cart />
+          <Cart data={fetchedData} />
         </div>
         <Search data={fetchedData} setData={setData} url={url} />
         <div className="flex gap-1 justify-center  flex-wrap">
-          {data == null ? (
+          {data == [] ? (
             <h1>Loading....</h1>
           ) : (
             data?.map((item) => {
@@ -101,9 +98,29 @@ const HomePage = () => {
             })
           )}
           {data?.length == 0 && (
-            <p className="text-gray-500">Nothing in selected range available</p>
+            <div className="text-center">
+              <p className="text-gray-500">
+                Nothing in selected range available
+              </p>
+              <button
+                onClick={() => setData(fetchedData)}
+                className="bg-[#00b1bd] text-white mt-4 py-1 px-2 rounded-lg"
+              >
+                Show All items
+              </button>
+            </div>
           )}
         </div>
+        {data?.length != fetchedData?.length && data?.length != 0 && (
+          <div className="text-center">
+            <button
+              onClick={() => setData(fetchedData)}
+              className="bg-[#00b1bd] text-white mt-4 py-1 px-2 rounded-lg"
+            >
+              Show All items
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

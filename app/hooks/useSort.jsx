@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import jsonData from "../data.json";
-import useFetch from "./useFetch";
+import React, { useState } from "react";
 
 const useSort = () => {
   const [typeOfSorting, setTypeOfSorting] = useState("Sorted by Id");
@@ -58,12 +56,7 @@ const useSort = () => {
       }
     });
     setTypeOfSorting("Sorted by Range");
-    // console.log(itemsInRange.length);
-    // console.log(rangedDate);
-    // if (itemsInRange.length != 0) {
-    //   console.log("rangedDate");
     return itemsInRange;
-    // } else return rangedDate;
   };
   return {
     sortByName,
