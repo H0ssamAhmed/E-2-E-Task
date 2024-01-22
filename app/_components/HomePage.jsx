@@ -14,7 +14,7 @@ const HomePage = () => {
   const sort = useSort(url);
   const { fetchedData, handleAddToCart, handllRemoveFromCart } = useFetch(url);
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   useEffect(() => {
     setTimeout(() => {
       setData(fetchedData);
