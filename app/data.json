@@ -12,21 +12,21 @@
       "name": "Smartphone",
       "description": "Flagship smartphone with advanced camera features",
       "price": 799,
-      "isAddedToCart": false
+      "isAddedToCart": true
     },
     {
       "id": "3",
       "name": "Coffee Maker",
       "description": "Automatic coffee maker with programmable settings",
       "price": 69,
-      "isAddedToCart": false
+      "isAddedToCart": true
     },
     {
       "id": "4",
       "name": "Headphones",
       "description": "Wireless noise-canceling headphones for immersive audio",
       "price": 129,
-      "isAddedToCart": false
+      "isAddedToCart": true
     },
     {
       "id": "5",
