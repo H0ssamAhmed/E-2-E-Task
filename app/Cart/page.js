@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import useFetch from "../hooks/useFetch";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const Cart = () => {
 
 
 
-    const { fetchedData, handllRemoveFromCart } = useFetch()
+    const { fetchedData, handleAddRemove } = useFetch()
 
     let allItems = []
     const items = fetchedData?.filter((item) => {
@@ -25,7 +25,7 @@ const Cart = () => {
     document.title = `Cart | ${allItems?.length} Items`
 
     const removeFromCart = (id) => {
-        handllRemoveFromCart(id);
+        handleAddRemove(id);
     };
 
     return (
@@ -66,8 +66,6 @@ const Cart = () => {
                                                 <p className=" text-end">{item.price}$</p>
                                                 <button className=" text-end">{item.isAddedToCart}</button>
                                                 <button>
-
-
                                                     <span
                                                         className="bg-red-400 w-full hover:bg-red-600 transition-all text-sm text-white p-2 rounded-lg"
                                                         onClick={() => removeFromCart(item.id)}
@@ -89,7 +87,6 @@ const Cart = () => {
                             }
                         </div>
                         <div className=" h-full w-full bg-white rounded-md p-4">
-
                             <CheckoutForm />
                         </div>
                         <Link href='/'>
@@ -99,12 +96,8 @@ const Cart = () => {
                         </Link>
                     </div>
                 }
-
-
-
             </div>
         </>
-
     );
 };
 
